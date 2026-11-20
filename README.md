@@ -21,9 +21,12 @@ ros2_ws/
 │       ├── src/block_detector.cpp       # 节点 2：识别 → 三路结果
 │       ├── src/detect_block_server.cpp  # 节点 3：/detect_block 服务端
 │       ├── images/blocks.png            # 样图
-│       ├── docs/实操图/                  # 三张实操截图
 │       ├── CMakeLists.txt
 │       └── package.xml
+├── resource/                        # 实操图（文件名前缀 hsq_ = 提交者姓名缩写）
+│   ├── hsq_01_red.png
+│   ├── hsq_02_blue.png
+│   └── hsq_03_green.png
 └── README.md
 ```
 
@@ -168,11 +171,13 @@ ros2 topic pub --once /target_color std_msgs/msg/String "{data: ''}"
 
 ## 9. 实操图
 
+统一放在仓库根目录的 `resource/` 下，文件名前缀 `hsq_` 为提交者姓名缩写（与提交身份 `hsq_butter@163.com` 一致）。
+
 | 文件 | 内容 |
 | --- | --- |
-| `docs/实操图/01_red.png` | 控制台请求 red，Foxglove 上只剩红框 |
-| `docs/实操图/02_blue.png` | 控制台请求 blue，Foxglove 上只剩蓝框 |
-| `docs/实操图/03_green.png` | 控制台请求 green，Foxglove 上只剩绿框 |
+| `resource/hsq_01_red.png` | 控制台请求 red，Foxglove 上只剩红框 |
+| `resource/hsq_02_blue.png` | 控制台请求 blue，Foxglove 上只剩蓝框 |
+| `resource/hsq_03_green.png` | 控制台请求 green，Foxglove 上只剩绿框 |
 
 每张图里都能同时看到「Foxglove 画出来的识别框」和「控制台的 service call 命令与返回」。
 
